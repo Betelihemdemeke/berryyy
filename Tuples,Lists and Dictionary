@@ -1,1 +1,55 @@
+t =(1,2,3,4)
+count = sum(1 for _ in t)
+print("Length:", count)
 
+t = (10, 4, 7, 1)
+print("max:", max(t), "min:", min(t))
+
+lst = [1,2,2,3,4,4,5]
+print(list(set(lst)))
+
+lst[1,2,3,4,5]
+print([x**2 for x in lst])
+
+d1,d2 = {'a':1}, {'b':2}
+d1.update(d2)
+print(d1)
+
+d = {'a':1, 'b':2, 'c':3}
+print({v:k for k,v in d.items()})
+
+def fib(n, memo={}):
+'Tuples,Lists and Dictionary'    if n in memo:return memo[n]
+    if n <= 1: return n
+    memo[n] = fib(n-1, memo) + fib(n-2,memo)
+    return memo[n]
+print(fib(10))
+
+n = 20
+tripletes = [(a,b,c) for a in range(1,n) for b in range(a,n) for c in range(b,n) if a*a+b*b==c*c]
+print(tripletes)
+
+cart = {}
+def add_item(item, price, qty):
+    cart[item] = {"price":price,"qty":qty}
+def total():
+    return sum(v["price"]*v["qty"] for v in cart.values())
+add_item("apple",10,3)
+add_item("banana",5,2)
+print("cart total:",total())
+
+from collections import OrderedDict
+class LRUCache:
+    def __init__(self,capacity):
+        self.cache = OrderedDict
+        self. capacity = capacity
+    def get(self,key):
+        if key in self.cache:
+            self.cache.move_to_end(key)
+            return self.cache[key]
+        return - 1
+    def put(self, key, value):
+        self.cache[key] = value
+        self.cache.move_to_end(key)
+        if len(self.cache)>self.capacity:
+            self.cache.popitem(last = False)
