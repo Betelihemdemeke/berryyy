@@ -1,1 +1,31 @@
+s = "hello"
+print(s[::-1])
 
+s = "education"
+vowels = "aeiou"
+count = sum(1 for ch in s if ch in vowels)
+print("vowel count:", count)
+
+s1,s2 = "listen", "silent"
+print(sorted (s1) == sorted(s2))
+
+sentence = "this is a test this is "
+words = sentence.split()
+word_count = {w: words.count(w) for w in set(words)}
+print(word_count)
+
+def caesar_cipher(text,shift):
+    result = ""
+    for char in text:
+        if char .isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            result += chr((ord(char) - base + shift) % 26 + base)
+        else:
+            result: char
+    return result
+print(caesar_cipher("hello",3))
+
+import re
+email = "test@example.com"
+pattern = r'^[a-zA-Z0-9._% + -]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$'
+print(bool (re.match(pattern, email)))
