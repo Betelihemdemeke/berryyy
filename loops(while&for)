@@ -1,1 +1,143 @@
+for i in range(1,11):
+    print(i)
+
+def multiplication_table(n):
+    i = 1
+    while i <= 10:
+        print(f"{n} x {i} = {n*i}")
+        i += 1
+
+def pyramid(n):
+    for i in range(1,n+1):
+        print("*" * i)
+
+def primes_up_to(n):
+    primes = []
+    for num in range(2, n+1):
+        if all(num % i != 0 for i in range(2,int(num**0.5)+1)):
+            primes.append(num)
+    return primes
+
+def factoial(n):
+    return 1 if n == 0 else n * factorial(n-1)
+
+def sum_numbers(*args, **kwargs):
+    return sum (args) + sum(kwargs.values())
+
+def add_all(*args):
+    return sum (args)
+
+for i in range(1,11):
+    if i == 5:
+        continue
+    print(i)
+
+for i in range(1,11):
+    if i == 7:
+        break
+    print(i)
+
+def hanoi(n,source,target,auxiliary):
+    if n == 1:
+        print(f"move disk 1 from {source} to {target}")
+        return
+    hanoi(n-1,source,auxiliary,target) 
+    print(f"move disk {n} from {source} to {target}")
+    hanoi(n-1,auxiliary,target,source)
+hanoi(3,"A","B","C","D")
+
+board = [" "] * 9
+
+def print_board():
+    for i in range(0,9,3):
+        print(board[i],"|",board[i+1], "|",board[i+2])
+        if i < 6: print("--------")
+
+player = "X"
+for turn in range(9):
+    print_board()
+    move = int(input(f"player {player},enter position (0-8):"))
+    if board[move] == " ":
+        board[move] = player
+        player = "0" if player == "X" else "X"
+    else:
+        print("Invalid move, try again")
+
+print_board()
+print("Game over !")
+
+for i in range(1,11):
+    print(i)
+
+OBOBOBdef multiplication_table(n):
+    i = 1
+OBOBOBOBOBOB    while i <= 10:
+        print(f"{n} x {i} = {n*i}")
+        i += 1
+OBOBOB
+OBOBOBdef pyramid(n):
+    for i in range(1,n+1):
+        print("*" * i)
+
+def primes_up_to(n):
+    primes = []
+    for num in range(2, n+1):
+        if all(num % i != 0 for i in range(2,int(num**0.5)+1)):
+            primes.append(num)
+    return primes
+
+def factoial(n):
+    return 1 if n == 0 else n * factorial(n-1)
+
+def sum_numbers(*args, **kwargs):
+    return sum (args) + sum(kwargs.values())
+
+def add_all(*args):
+    return sum (args)
+
+for i in range(1,11):
+    if i == 5:
+        continue
+    print(i)
+
+for i in range(1,11):
+    if i == 7:
+        break
+    print(i)
+
+def hanoi(n,source,target,auxiliary):
+    if n == 1:
+        print(f"move disk 1 from {source} to {target}")
+        return
+    hanoi(n-1,source,auxiliary,target) 
+    print(f"move disk {n} from {source} to {target}")
+    hanoi(n-1,auxiliary,target,source)
+OBOBOBhanoi(3,"A","B","C","D")
+OBOBOB
+OBOBOBboard = [" "] * 9
+OBOBOB
+def print_board():
+OBOBOB    for i in range(0,9,3):
+        print(board[i],"|",board[i+1], "|",board[i+2])
+        if i < 6: print("--------")
+
+player = "X"
+for turn in range(9):
+    print_board()
+    move = int(input(f"player {player},enter position (0-8):"))
+    if board[move] == " ":
+        board[move] = player
+        player = "0" if player == "X" else "X"
+    else:
+        print("Invalid move, try again")
+
+print_board()
+print("Game over !")
+
+
+
+
+
+
+
 
