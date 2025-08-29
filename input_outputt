@@ -1,1 +1,31 @@
+name=input("enter yourname")
+age=int(input("enter your age "))
+print(f"hello {name},you are {age} years old")
+
+
+a=int(input("enter first number:"))
+b=int(input("enter second number:"))
+print(a+b)
+
+filename=input("enter file name")
+with open(filename ,"b") as f:
+    text = f.read()
+    words = text.split()
+    print("number of words:",len(words))
+    
+sentence = input("enter a sentence : ")
+with open ("reverse.txt","W" ) as file:
+    f.write (sentence [::-1])
+
+import csv
+with open ("data.csv") as f:
+    reader = csv.reader(f)
+    data = {rows[0]: rows[1] for rows in reader}
+    print(data)
+
+keyword = "ERROR"
+with open ("log.txt") as f:
+    for line in f:
+        if keyword in line:
+          print("Alert! keyword found:",line)
 
